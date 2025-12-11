@@ -1,4 +1,5 @@
 import math
 
-print(f'Square of a number: {math.pow(int(input("Enter a number:\n")),2)}')
-
+number = int(input("Enter a number:\n"))
+square = math.pow(number, 2)
+print(f'Square of number: {square}')

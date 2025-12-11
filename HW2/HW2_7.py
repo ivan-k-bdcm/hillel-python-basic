@@ -1,15 +1,12 @@
 user_number = int(input("Enter 4-digit number:\n"))
 
-n, user_number = divmod(user_number,1000)
+digit, user_number = divmod(user_number, 1000)
+print(digit)
 
-print(str(n) + "\n")
+digit, user_number = divmod(user_number, 100)
+print(digit)
 
-n, user_number = divmod(user_number,100)
-
-print(str(n) + "\n")
-
-n, user_number = divmod(user_number,10)
-
-print(str(n) + "\n")
+digit, user_number = divmod(user_number, 10)
+print(digit)
 
 print(user_number)

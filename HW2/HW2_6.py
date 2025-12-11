@@ -1,4 +1,6 @@
 length = int(input("Enter length:\n"))
 width = int(input("Enter width:\n"))
 
-print(f'Perimeter: {2*(length+width)}')
+perimeter = 2 * (length + width)
+
+print(f'Perimeter: {perimeter}')

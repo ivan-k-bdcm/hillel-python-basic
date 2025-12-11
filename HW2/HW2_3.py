@@ -1,16 +1,18 @@
 minutes = int(input("Enter minutes:\n"))
-hour = minutes//60
-minute = minutes%60
+
+hours = minutes // 60
+minutes_left = minutes % 60
+
 result = ""
-if hour == 1:
-    result += str(hour) + " hour "
-elif hour > 1:
-    result += str(hour) + " hours "
 
+if hours == 1:
+    result += f"{hours} hour "
+elif hours > 1:
+    result += f"{hours} hours "
 
-if minute == 1:
-    result += str(minute) + " minute"
-elif minute > 1:
-    result += str(minute) + " minutes"
+if minutes_left == 1:
+    result += f"{minutes_left} minute"
+elif minutes_left > 1:
+    result += f"{minutes_left} minutes"
 
 print(result)
