@@ -4,4 +4,4 @@
 #Метод map() пертворює рядкові значення в цілочисельні та присвоює їх змінним a, b та c
 a, b, c = map(int, input("Enter a numbers:\n").split(","))
 
-print((a+b+c)/3)
+print(f'Average: {(a+b+c)/3}')
