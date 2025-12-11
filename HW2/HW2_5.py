@@ -1,0 +1,1 @@
+print("Last digit: " + str(int(input("Enter number:\n"))%10))
