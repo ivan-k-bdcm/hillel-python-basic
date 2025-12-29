@@ -1,7 +1,5 @@
 number = int(input("Enter number: "))
 
-
-
 while number > 9:
     product = 1
 
