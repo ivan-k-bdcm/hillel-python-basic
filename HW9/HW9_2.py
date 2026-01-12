@@ -1,8 +1,5 @@
 def difference(*args):
-    if not args:
-        return 0
-
-    return round(max(args) - min(args), 2)
+    return 0 if not args else round(max(args) - min(args), 2)
 
 
 assert difference(1, 2, 3) == 2, 'Test1'
