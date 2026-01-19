@@ -1,7 +1,14 @@
 from inspect import isgenerator
 
 
-def generate_cube_numbers(end):
+def generate_cube_numbers(end: int):
+    """
+    Генерує куби чисел, починаючи з 2, доки значення куба
+    не перевищить end.
+
+    :param end: Верхня межа значень.
+    :yield: Куби чисел
+    """
     for i in range(2, end):
         current = pow(i, 3)
         if current <= end:
