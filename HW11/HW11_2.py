@@ -1,3 +1,6 @@
+from inspect import isgenerator
+
+
 def generate_cube_numbers(end):
     for i in range(2, end):
         current = pow(i, 3)
@@ -5,9 +8,6 @@ def generate_cube_numbers(end):
             yield current
         else:
             return
-
-
-from inspect import isgenerator
 
 
 gen = generate_cube_numbers(1)

@@ -1,5 +1,15 @@
 def is_even(number: int) -> bool:
-    return (number & 1) == 0
+    """
+    Перевіряє, чи є число парним.
+
+    Функція не використовує ділення або операції,
+    пов'язані з ним (/, //, %, divmod).
+    Працює для чисел будь-якого розміру.
+
+    :param number: Ціле число
+    :return: True, якщо число парне, False — якщо непарне
+    """
+    return not number & 1
 
 
 assert is_even(2494563894038**2) == True, 'Test1'

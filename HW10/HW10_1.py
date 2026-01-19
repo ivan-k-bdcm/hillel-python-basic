@@ -1,3 +1,6 @@
+from inspect import isgenerator, currentframe
+
+
 def square(x):
     return x ** 2
 
@@ -13,8 +16,6 @@ def some_gen(begin, end, func):
         yield current
         current = func(current)
 
-
-from inspect import isgenerator, currentframe
 
 gen = some_gen(2, 4, square)
 assert isgenerator(gen) == True, 'Test1'

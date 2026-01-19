@@ -1,3 +1,6 @@
+from inspect import isgenerator
+
+
 def prime_generator(end):
     for n in range(2, end+1):
         for i in range(2, n):
@@ -5,9 +8,6 @@ def prime_generator(end):
                 break
         else:
             yield n
-
-
-from inspect import isgenerator
 
 
 gen = prime_generator(1)
