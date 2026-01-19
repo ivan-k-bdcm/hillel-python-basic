@@ -6,7 +6,9 @@ def prime_generator(end):
         else:
             yield n
 
+
 from inspect import isgenerator
+
 
 gen = prime_generator(1)
 assert isgenerator(gen) == True, 'Test0'
