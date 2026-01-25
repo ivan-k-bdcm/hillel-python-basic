@@ -1,4 +1,13 @@
-def prime_generator(end):
+from inspect import isgenerator
+
+
+def prime_generator(end: int):
+    """
+    Генератор простих числе у заданому діапазоні
+
+    :param end:Верхня межа діапазону, до якої генеруються прості числа.
+    :yield: Наступне просте число в діапазоні [2, end].
+    """
     for n in range(2, end+1):
         for i in range(2, n):
             if n % i == 0:
@@ -6,7 +15,6 @@ def prime_generator(end):
         else:
             yield n
 
-from inspect import isgenerator
 
 gen = prime_generator(1)
 assert isgenerator(gen) == True, 'Test0'
