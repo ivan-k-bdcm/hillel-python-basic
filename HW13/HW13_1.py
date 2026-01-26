@@ -6,9 +6,9 @@ class Human:
         self.gender = gender
         self.age = age
 
-
     def __str__(self):
         return f'Name: {self.first_name}\nSurname: {self.last_name}\nGender: {self.gender}\nAge:{self.age}\n'
+
 
 class Student(Human):
 
@@ -18,6 +18,7 @@ class Student(Human):
 
     def __str__(self):
         return f'{super().__str__()}Record Book: {self.record_book}\n'
+
 
 class Group:
 
