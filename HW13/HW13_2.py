@@ -1,6 +1,7 @@
 class Counter:
     """Counter with minimum value and maximum value"""
-    def __init__(self, current: int=1, min_value: int=0, max_value: int=10) -> None:
+
+    def __init__(self, current: int = 1, min_value: int = 0, max_value: int = 10) -> None:
         """
         Initialize the counter.
 

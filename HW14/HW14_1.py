@@ -5,6 +5,7 @@ class GroupLimitError(Exception):
 
 class Human:
     """Base class representing a human."""
+
     def __init__(self, gender: str, age: int, first_name: str, last_name: str) -> None:
         """
         Initialize a Human object.
@@ -26,6 +27,7 @@ class Human:
 
 class Student(Human):
     """Class representing a student"""
+
     def __init__(self, gender: str, age: int, first_name: str, last_name: str, record_book: str) -> None:
         """
         Initialize a Student object.
@@ -46,6 +48,7 @@ class Student(Human):
 
 class Group:
     """Class representing a group of students."""
+
     def __init__(self, number: str) -> None:
         """
         Initialize a Group object.
@@ -95,6 +98,7 @@ class Group:
         all_students = '\n'.join(str(student_to_print) for student_to_print in self.group)
 
         return f'Number:{self.number}\n {all_students} '
+
 
 gr = Group('PD1')
 
