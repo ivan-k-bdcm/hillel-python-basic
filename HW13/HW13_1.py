@@ -58,12 +58,7 @@ class Group:
         Add a student to the group.
 
         :param student_to_add: Student object
-        :raises GroupLimitError: if student already has 10 students
         """
-        if len(self.group) >= 10:
-            raise GroupLimitError(
-                f'Group {self.number} already has 10 students'
-            )
         self.group.add(student_to_add)
 
     def find_student(self, last_name: str) -> Student | None:
