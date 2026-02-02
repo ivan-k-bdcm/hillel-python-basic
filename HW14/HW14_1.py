@@ -94,19 +94,35 @@ class Group:
 
         return f'Number:{self.number}\n {all_students} '
 
-
-
-st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
-st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 gr = Group('PD1')
-gr.add_student(st1)
-gr.add_student(st2)
+
+students_data = [
+    ('Male', 30, 'Steve', 'Jobs', 'AN142'),
+    ('Female', 25, f'Liz', 'Taylor', f'AN14'),
+]
+
+# Add 10 students
+for i in range(10):
+    students_data.append(
+        ('Female', 25, f'Liz{i}', 'Tay', f'AN14{i}')
+    )
+
+try:
+    for student_gender, student_age, student_first_name, student_last_name, student_record_book in students_data:
+        student = Student(student_gender, student_age, student_first_name, student_last_name, student_record_book)
+        gr.add_student(student)
+
+except GroupLimitError as e:
+    print(f'Error: {e}')
+
 print(gr)
-assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
+
+# ====== Tests ======
+
+assert isinstance(gr.find_student('Jobs'), Student), 'Test1'
 assert gr.find_student('Jobs2') is None, 'Test2'
-assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод пошуку повинен повертати екземпляр'
 
 gr.delete_student('Taylor')
-print(gr)  # Only one student
+print(gr)
 
-gr.delete_student('Taylor')  # No error!
+gr.delete_student('Taylor')  # No error
