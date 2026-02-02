@@ -1,12 +1,14 @@
 class GroupLimitError(Exception):
-    """Raised when trying to add more than 10 students to a group"""
+    """Raised when trying to add more than 10 students to a group."""
     pass
 
+
 class Human:
-    """Base class representing a human"""
+    """Base class representing a human."""
     def __init__(self, gender: str, age: int, first_name: str, last_name: str) -> None:
         """
-        Initialize a Human object
+        Initialize a Human object.
+
         :param gender: Human gender
         :param age: Human age
         :param first_name: Human first name
@@ -26,7 +28,7 @@ class Student(Human):
     """Class representing a student"""
     def __init__(self, gender: str, age: int, first_name: str, last_name: str, record_book: str) -> None:
         """
-        Initialize a Student object
+        Initialize a Student object.
 
         :param gender: Student gender
         :param age: Student age
@@ -43,10 +45,10 @@ class Student(Human):
 
 
 class Group:
-    """Class representing a group of students"""
+    """Class representing a group of students."""
     def __init__(self, number: str) -> None:
         """
-        Initialize a Group object
+        Initialize a Group object.
 
         :param number: Group number
         """
@@ -55,7 +57,7 @@ class Group:
 
     def add_student(self, student_to_add: Student) -> None:
         """
-        Add a student to the group
+        Add a student to the group.
 
         :param student_to_add: Student object
         :raises GroupLimitError: if student already has 10 students
@@ -68,7 +70,7 @@ class Group:
 
     def find_student(self, last_name: str) -> Student | None:
         """
-        Find a student by last name
+        Find a student by last name.
 
         :param last_name: Student last name
         :return: Student object or None
@@ -80,7 +82,7 @@ class Group:
 
     def delete_student(self, last_name: str) -> None:
         """
-        Delete a student from the group by last name
+        Delete a student from the group by last name.
 
         :param last_name: Student last name to delete
         """
